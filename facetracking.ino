@@ -1,5 +1,5 @@
 #include<Servo.h>
-
+//yeh part important hai 
 Servo x, y;
 int width = 640, height = 480; 
 int xpos = 90, ypos = 90;  
@@ -15,7 +15,7 @@ void setup() {
   y.write(ypos);
 }
 const int angle = 2;  
-
+// this is needede
 void loop() {
   if (Serial.available() > 0)
   {
@@ -27,7 +27,6 @@ void loop() {
         y_mid = Serial.parseInt(); 
     }
     
-        
     if (x_mid > width / 2 + 30)
       xpos += angle;
     if (x_mid < width / 2 - 30)
